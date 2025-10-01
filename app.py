@@ -82,7 +82,7 @@ Use the sidebar to navigate through the pages.
         df[['Weight','Height','BMI','Calories','Water','HeartRate','Steps']] = 0
         df.to_csv(DATA_FILE, index=False)
         st.success("All daily logs have been reset to 0! Weekly targets cleared.")
-        st.experimental_rerun()
+        st.rerun()
 
 # ---------- BMI Page ----------
 elif page == "💪 Buff or Fluff?":
@@ -200,3 +200,4 @@ elif page == "📅 Weekly Targets":
         else: st.info("⚠️ Calories exceeded weekly target!")
     else:
         st.info("No logs in the last 7 days yet.")
+
